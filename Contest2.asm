@@ -3,17 +3,39 @@ INCLUDE Irvine32.inc
 .data
 titleMsg BYTE "BYTE HOPPER",0
 startMsg BYTE "Press any key to start...",0
+topBorder BYTE "+----------------------------------------+",0
+midBorder BYTE "|                                        |",0
+botBorder BYTE "+----------------------------------------+",0
 
 .code
 main PROC
     call Clrscr
-    mov dh,10
-    mov dl,30
+
+    mov dh,2
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET topBorder
+    call WriteString
+
+    mov dh,3
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET midBorder
+    call WriteString
+
+    mov dh,4
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET botBorder
+    call WriteString
+
+    mov dh,6
+    mov dl,31
     call Gotoxy
     mov edx,OFFSET titleMsg
     call WriteString
 
-    mov dh,12
+    mov dh,8
     mov dl,24
     call Gotoxy
     mov edx,OFFSET startMsg
