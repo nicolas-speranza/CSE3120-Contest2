@@ -246,6 +246,10 @@ main PROC
 
     call ReadChar
     mov inputChar,al
+    cmp inputChar,'q'
+    je done
+    cmp inputChar,'Q'
+    je done
     dec car1X
     cmp car1X,21
     jae skipReset1
@@ -257,6 +261,9 @@ skipReset1:
     mov edx,OFFSET car1
     call WriteString
     jmp gameLoop
+
+done:
+    exit
 
 main ENDP
 END main
