@@ -7,6 +7,8 @@ topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
 botBorder BYTE "+----------------------------------------+",0
 playerCh BYTE "@",0
+playerX BYTE 40
+playerY BYTE 3
 
 .code
 main PROC
@@ -30,8 +32,8 @@ main PROC
     mov edx,OFFSET botBorder
     call WriteString
 
-    mov dh,3
-    mov dl,40
+    mov dh,playerY
+    mov dl,playerX
     call Gotoxy
     mov edx,OFFSET playerCh
     call WriteString
