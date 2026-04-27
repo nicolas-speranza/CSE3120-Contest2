@@ -37,6 +37,7 @@ bottomBorder BYTE "+----------------------------------------+",0
 car4 BYTE "[=]",0
 inputChar BYTE ?
 car1X BYTE 28
+blank3 BYTE "   ",0
 
 .code
 main PROC
@@ -234,6 +235,11 @@ main PROC
     mov edx,OFFSET car4
     call WriteString
 
+    mov dh,4
+    mov dl,car1X
+    call Gotoxy
+    mov edx,OFFSET blank3
+    call WriteString
 
     call ReadChar
     mov inputChar,al
