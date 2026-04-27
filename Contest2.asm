@@ -10,6 +10,7 @@ playerCh BYTE "@",0
 playerX BYTE 40
 playerY BYTE 3
 moveMsg BYTE "Use WASD to move",0
+quitMsg BYTE "Press Q to quit",0
 
 .code
 main PROC
@@ -55,6 +56,12 @@ main PROC
     mov dl,28
     call Gotoxy
     mov edx,OFFSET moveMsg
+    call WriteString
+
+    mov dh,10
+    mov dl,28
+    call Gotoxy
+    mov edx,OFFSET quitMsg
     call WriteString
 
     call ReadChar
