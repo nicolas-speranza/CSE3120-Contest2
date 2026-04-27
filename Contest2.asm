@@ -32,6 +32,7 @@ dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
 goalHint BYTE "Reach the goal!",0
 roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
+roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 
 .code
 main PROC
@@ -209,6 +210,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET roadMark2
+    call WriteString
+
+    mov dh,7
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET roadMark3
     call WriteString
 
     call ReadChar
