@@ -17,6 +17,7 @@ goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
 roadLine3 BYTE "|----------------------------------------|",0
+startLine BYTE "|================ START =================|",0
 
 .code
 main PROC
@@ -104,6 +105,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET roadLine3
+    call WriteString
+
+    mov dh,7
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET startLine
     call WriteString
 
     call ReadChar
