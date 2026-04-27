@@ -18,6 +18,7 @@ roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
 roadLine3 BYTE "|----------------------------------------|",0
 startLine BYTE "|================ START =================|",0
+car1 BYTE "[=]",0
 
 .code
 main PROC
@@ -111,6 +112,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET startLine
+    call WriteString
+
+    mov dh,4
+    mov dl,28
+    call Gotoxy
+    mov edx,OFFSET car1
     call WriteString
 
     call ReadChar
