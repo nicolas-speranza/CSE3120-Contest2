@@ -28,6 +28,7 @@ grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
 borderHint BYTE "WASD Move   Q Quit",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
+dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
 
 .code
 main PROC
@@ -181,6 +182,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET safeLine
+    call WriteString
+
+    mov dh,4
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET dividerLine
     call WriteString
 
     call ReadChar
