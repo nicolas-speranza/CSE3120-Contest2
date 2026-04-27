@@ -16,6 +16,7 @@ startPrompt BYTE "Press any key to begin",0
 goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
+roadLine3 BYTE "|----------------------------------------|",0
 
 .code
 main PROC
@@ -97,6 +98,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET roadLine2
+    call WriteString
+
+    mov dh,6
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET roadLine3
     call WriteString
 
     call ReadChar
