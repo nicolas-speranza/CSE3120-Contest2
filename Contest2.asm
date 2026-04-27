@@ -38,10 +38,13 @@ car4 BYTE "[=]",0
 inputChar BYTE ?
 car1X BYTE 28
 blank3 BYTE "   ",0
+gameLoopLabel BYTE 0
 
 .code
 main PROC
     call Clrscr
+
+    gameLoop:
 
     mov dh,2
     mov dl,20
@@ -253,7 +256,7 @@ skipReset1:
     call Gotoxy
     mov edx,OFFSET car1
     call WriteString
-    exit
+    jmp gameLoop
 
 main ENDP
 END main
