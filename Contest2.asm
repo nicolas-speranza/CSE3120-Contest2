@@ -46,6 +46,7 @@ car3X BYTE 50
 car4X BYTE 55
 hitMsg BYTE "You got hit!",0
 winMsg BYTE "You made it across!",0
+titleColor BYTE yellow+(black*16)
 
 .code
 main PROC
@@ -191,11 +192,15 @@ main PROC
     mov edx,OFFSET borderHint
     call WriteString
 
+    mov eax,titleColor
+    call SetTextColor
     mov dh,2
     mov dl,20
     call Gotoxy
     mov edx,OFFSET titleBar
     call WriteString
+    mov eax,white+(black*16)
+    call SetTextColor
 
     mov dh,3
     mov dl,20
