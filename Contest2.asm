@@ -46,11 +46,11 @@ car3X BYTE 50
 car4X BYTE 55
 hitMsg BYTE "You got hit!",0
 winMsg BYTE "You made it across!",0
-titleColor BYTE yellow+(black*16)
-playerColor BYTE lightGreen+(black*16)
-carColor BYTE lightRed+(black*16)
-goalColor BYTE yellow+(black*16)
-startColor BYTE lightGreen+(black*16)
+titleColor DWORD yellow+(black*16)
+playerColor DWORD lightGreen+(black*16)
+carColor DWORD lightRed+(black*16)
+goalColor DWORD yellow+(black*16)
+startColor DWORD lightGreen+(black*16)
 
 .code
 main PROC
