@@ -21,6 +21,7 @@ startLine BYTE "|================ START =================|",0
 car1 BYTE "[=]",0
 car2 BYTE "[###]",0
 car3 BYTE "[=]",0
+livesMsg BYTE "Lives: 3",0
 
 .code
 main PROC
@@ -132,6 +133,12 @@ main PROC
     mov dl,50
     call Gotoxy
     mov edx,OFFSET car3
+    call WriteString
+
+    mov dh,1
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET livesMsg
     call WriteString
 
     call ReadChar
