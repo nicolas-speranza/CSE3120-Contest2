@@ -35,6 +35,7 @@ roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 bottomBorder BYTE "+----------------------------------------+",0
 car4 BYTE "[=]",0
+inputChar BYTE ?
 
 .code
 main PROC
@@ -232,6 +233,9 @@ main PROC
     mov edx,OFFSET car4
     call WriteString
 
+
+    call ReadChar
+    mov inputChar,al
     call ReadChar
     exit
 
