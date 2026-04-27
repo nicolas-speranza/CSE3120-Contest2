@@ -44,6 +44,7 @@ car2X BYTE 40
 blank5 BYTE "     ",0
 car3X BYTE 50
 car4X BYTE 55
+hitMsg BYTE "You got hit!",0
 
 .code
 main PROC
@@ -353,6 +354,17 @@ skipReset4:
     call Gotoxy
     mov edx,OFFSET car4
     call WriteString
+
+    mov al,playerY
+    cmp al,4
+    jne skipHit1
+    mov al,playerX
+    cmp al,car1X
+    jb skipHit1
+    cmp al,car1X+2
+    ja skipHit1
+    jmp hitPlayer
+skipHit1:
 
     mov dh,playerY
     mov dl,playerX
