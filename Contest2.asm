@@ -24,6 +24,7 @@ car3 BYTE "[=]",0
 livesMsg BYTE "Lives: 3",0
 scoreMsg BYTE "Score: 0",0
 levelMsg BYTE "Level: 1",0
+grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
 
 .code
 main PROC
@@ -153,6 +154,12 @@ main PROC
     mov dl,50
     call Gotoxy
     mov edx,OFFSET levelMsg
+    call WriteString
+
+    mov dh,8
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET grassLine
     call WriteString
 
     call ReadChar
