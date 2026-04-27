@@ -247,7 +247,12 @@ main PROC
     cmp car1X,21
     jae skipReset1
     mov car1X,57
-    skipReset1:
+skipReset1:
+    mov dh,4
+    mov dl,car1X
+    call Gotoxy
+    mov edx,OFFSET car1
+    call WriteString
     exit
 
 main ENDP
