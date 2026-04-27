@@ -11,6 +11,7 @@ playerX BYTE 40
 playerY BYTE 3
 moveMsg BYTE "Use WASD to move",0
 quitMsg BYTE "Press Q to quit",0
+laneMsg BYTE "Avoid traffic and reach the top",0
 
 .code
 main PROC
@@ -62,6 +63,12 @@ main PROC
     mov dl,28
     call Gotoxy
     mov edx,OFFSET quitMsg
+    call WriteString
+
+    mov dh,11
+    mov dl,22
+    call Gotoxy
+    mov edx,OFFSET laneMsg
     call WriteString
 
     call ReadChar
