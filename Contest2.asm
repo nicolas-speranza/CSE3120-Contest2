@@ -22,6 +22,7 @@ car1 BYTE "[=]",0
 car2 BYTE "[###]",0
 car3 BYTE "[=]",0
 livesMsg BYTE "Lives: 3",0
+scoreMsg BYTE "Score: 0",0
 
 .code
 main PROC
@@ -139,6 +140,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET livesMsg
+    call WriteString
+
+    mov dh,1
+    mov dl,35
+    call Gotoxy
+    mov edx,OFFSET scoreMsg
     call WriteString
 
     call ReadChar
