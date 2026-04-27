@@ -47,6 +47,7 @@ car4X BYTE 55
 hitMsg BYTE "You got hit!",0
 winMsg BYTE "You made it across!",0
 titleColor BYTE yellow+(black*16)
+playerColor BYTE lightGreen+(black*16)
 
 .code
 main PROC
@@ -72,11 +73,15 @@ main PROC
     mov edx,OFFSET botBorder
     call WriteString
 
+    mov eax,playerColor
+    call SetTextColor
     mov dh,playerY
     mov dl,playerX
     call Gotoxy
     mov edx,OFFSET playerCh
     call WriteString
+    mov eax,white+(black*16)
+    call SetTextColor
 
     mov dh,6
     mov dl,31
