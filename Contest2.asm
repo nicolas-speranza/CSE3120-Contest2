@@ -237,6 +237,7 @@ main PROC
 
     call ReadChar
     mov inputChar,al
+    dec car1X
     exit
 
 main ENDP
