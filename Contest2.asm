@@ -34,6 +34,7 @@ roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 bottomBorder BYTE "+----------------------------------------+",0
+car4 BYTE "[=]",0
 
 .code
 main PROC
@@ -223,6 +224,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET bottomBorder
+    call WriteString
+
+    mov dh,5
+    mov dl,55
+    call Gotoxy
+    mov edx,OFFSET car4
     call WriteString
 
     call ReadChar
