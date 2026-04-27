@@ -272,6 +272,13 @@ skipLeft:
     inc playerX
 skipRight:
 
+    cmp inputChar,'w'
+    jne skipUp
+    cmp playerY,3
+    jbe skipUp
+    dec playerY
+skipUp:
+
     dec car1X
     cmp car1X,21
     jae skipReset1
