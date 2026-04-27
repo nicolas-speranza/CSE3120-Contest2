@@ -42,6 +42,7 @@ gameLoopLabel BYTE 0
 blank1 BYTE " ",0
 car2X BYTE 40
 blank5 BYTE "     ",0
+car3X BYTE 50
 
 .code
 main PROC
@@ -317,7 +318,19 @@ skipReset2:
     call WriteString
 
     mov dh,6
-    mov dl,50
+    mov dh,6
+    mov dl,car3X
+    call Gotoxy
+    mov edx,OFFSET blank3
+    call WriteString
+
+    dec car3X
+    cmp car3X,21
+    jae skipReset3
+    mov car3X,57
+skipReset3:
+    mov dh,6
+    mov dl,car3X
     call Gotoxy
     mov edx,OFFSET car3
     call WriteString
