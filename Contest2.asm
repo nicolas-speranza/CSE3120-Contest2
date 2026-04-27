@@ -48,6 +48,7 @@ hitMsg BYTE "You got hit!",0
 winMsg BYTE "You made it across!",0
 titleColor BYTE yellow+(black*16)
 playerColor BYTE lightGreen+(black*16)
+carColor BYTE lightRed+(black*16)
 
 .code
 main PROC
@@ -149,18 +150,24 @@ main PROC
     mov edx,OFFSET startLine
     call WriteString
 
+    mov eax,carColor
+    call SetTextColor
     mov dh,4
     mov dl,car1X
     call Gotoxy
     mov edx,OFFSET car1
     call WriteString
 
+    mov eax,carColor
+    call SetTextColor
     mov dh,5
     mov dl,40
     call Gotoxy
     mov edx,OFFSET car2
     call WriteString
 
+    mov eax,carColor
+    call SetTextColor
     mov dh,6
     mov dl,50
     call Gotoxy
@@ -249,11 +256,15 @@ main PROC
     mov edx,OFFSET bottomBorder
     call WriteString
 
+    mov eax,carColor
+    call SetTextColor
     mov dh,5
     mov dl,55
     call Gotoxy
     mov edx,OFFSET car4
     call WriteString
+    mov eax,white+(black*16)
+    call SetTextColor
 
     mov dh,4
     mov dl,car1X
