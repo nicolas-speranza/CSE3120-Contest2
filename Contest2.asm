@@ -297,6 +297,24 @@ skipReset1:
     mov edx,OFFSET car1
     call WriteString
 
+    mov dh,5
+    mov dl,40
+    call Gotoxy
+    mov edx,OFFSET car2
+    call WriteString
+
+    mov dh,6
+    mov dl,50
+    call Gotoxy
+    mov edx,OFFSET car3
+    call WriteString
+
+    mov dh,5
+    mov dl,55
+    call Gotoxy
+    mov edx,OFFSET car4
+    call WriteString
+
     mov dh,playerY
     mov dl,playerX
     call Gotoxy
