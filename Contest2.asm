@@ -43,6 +43,7 @@ blank1 BYTE " ",0
 car2X BYTE 40
 blank5 BYTE "     ",0
 car3X BYTE 50
+car4X BYTE 55
 
 .code
 main PROC
@@ -336,7 +337,19 @@ skipReset3:
     call WriteString
 
     mov dh,5
-    mov dl,55
+    mov dh,5
+    mov dl,car4X
+    call Gotoxy
+    mov edx,OFFSET blank3
+    call WriteString
+
+    dec car4X
+    cmp car4X,21
+    jae skipReset4
+    mov car4X,57
+skipReset4:
+    mov dh,5
+    mov dl,car4X
     call Gotoxy
     mov edx,OFFSET car4
     call WriteString
