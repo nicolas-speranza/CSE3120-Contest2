@@ -6,6 +6,7 @@ startMsg BYTE "Press any key to start...",0
 topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
 botBorder BYTE "+----------------------------------------+",0
+playerCh BYTE "@",0
 
 .code
 main PROC
@@ -27,6 +28,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET botBorder
+    call WriteString
+
+    mov dh,3
+    mov dl,40
+    call Gotoxy
+    mov edx,OFFSET playerCh
     call WriteString
 
     mov dh,6
