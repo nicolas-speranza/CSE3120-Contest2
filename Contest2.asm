@@ -39,6 +39,7 @@ inputChar BYTE ?
 car1X BYTE 28
 blank3 BYTE "   ",0
 gameLoopLabel BYTE 0
+blank1 BYTE " ",0
 
 .code
 main PROC
@@ -250,6 +251,12 @@ main PROC
     je done
     cmp inputChar,'Q'
     je done
+
+    mov dh,playerY
+    mov dl,playerX
+    call Gotoxy
+    mov edx,OFFSET blank1
+    call WriteString
 
     cmp inputChar,'a'
     jne skipLeft
