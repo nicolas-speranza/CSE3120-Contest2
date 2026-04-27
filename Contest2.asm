@@ -49,6 +49,7 @@ winMsg BYTE "You made it across!",0
 titleColor BYTE yellow+(black*16)
 playerColor BYTE lightGreen+(black*16)
 carColor BYTE lightRed+(black*16)
+goalColor BYTE yellow+(black*16)
 
 .code
 main PROC
@@ -120,11 +121,15 @@ main PROC
     mov edx,OFFSET startPrompt
     call WriteString
 
+    mov eax,goalColor
+    call SetTextColor
     mov dh,3
     mov dl,20
     call Gotoxy
     mov edx,OFFSET goalLine
     call WriteString
+    mov eax,white+(black*16)
+    call SetTextColor
 
     mov dh,4
     mov dl,20
