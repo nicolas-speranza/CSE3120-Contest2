@@ -50,6 +50,7 @@ titleColor BYTE yellow+(black*16)
 playerColor BYTE lightGreen+(black*16)
 carColor BYTE lightRed+(black*16)
 goalColor BYTE yellow+(black*16)
+startColor BYTE lightGreen+(black*16)
 
 .code
 main PROC
@@ -149,11 +150,15 @@ main PROC
     mov edx,OFFSET roadLine3
     call WriteString
 
+    mov eax,startColor
+    call SetTextColor
     mov dh,7
     mov dl,20
     call Gotoxy
     mov edx,OFFSET startLine
     call WriteString
+    mov eax,white+(black*16)
+    call SetTextColor
 
     mov eax,carColor
     call SetTextColor
