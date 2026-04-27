@@ -265,6 +265,13 @@ main PROC
     dec playerX
 skipLeft:
 
+    cmp inputChar,'d'
+    jne skipRight
+    cmp playerX,58
+    jae skipRight
+    inc playerX
+skipRight:
+
     dec car1X
     cmp car1X,21
     jae skipReset1
