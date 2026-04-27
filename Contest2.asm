@@ -15,6 +15,7 @@ laneMsg BYTE "Avoid traffic and reach the top",0
 startPrompt BYTE "Press any key to begin",0
 goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
+roadLine2 BYTE "|----------------------------------------|",0
 
 .code
 main PROC
@@ -90,6 +91,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET roadLine
+    call WriteString
+
+    mov dh,5
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET roadLine2
     call WriteString
 
     call ReadChar
