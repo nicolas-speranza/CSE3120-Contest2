@@ -374,6 +374,15 @@ skipHit1:
 
     jmp gameLoop
 
+hitPlayer:
+    mov dh,12
+    mov dl,30
+    call Gotoxy
+    mov edx,OFFSET hitMsg
+    call WriteString
+    call ReadChar
+    exit
+
 done:
     exit
 
