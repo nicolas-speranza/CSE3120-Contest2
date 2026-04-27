@@ -29,6 +29,7 @@ borderHint BYTE "WASD Move   Q Quit",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
 dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
+goalHint BYTE "Reach the goal!",0
 
 .code
 main PROC
@@ -188,6 +189,12 @@ main PROC
     mov dl,20
     call Gotoxy
     mov edx,OFFSET dividerLine
+    call WriteString
+
+    mov dh,1
+    mov dl,62
+    call Gotoxy
+    mov edx,OFFSET goalHint
     call WriteString
 
     call ReadChar
