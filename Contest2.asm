@@ -275,6 +275,13 @@ skipReset1:
     call Gotoxy
     mov edx,OFFSET car1
     call WriteString
+
+    mov dh,playerY
+    mov dl,playerX
+    call Gotoxy
+    mov edx,OFFSET playerCh
+    call WriteString
+
     jmp gameLoop
 
 done:
