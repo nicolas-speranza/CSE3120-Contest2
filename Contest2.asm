@@ -238,6 +238,10 @@ main PROC
     call ReadChar
     mov inputChar,al
     dec car1X
+    cmp car1X,21
+    jae skipReset1
+    mov car1X,57
+    skipReset1:
     exit
 
 main ENDP
