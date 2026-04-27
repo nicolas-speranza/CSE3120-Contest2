@@ -26,6 +26,7 @@ scoreMsg BYTE "Score: 0",0
 levelMsg BYTE "Level: 1",0
 grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
 borderHint BYTE "WASD Move   Q Quit",0
+titleBar BYTE "|               BYTE HOPPER              |",0
 
 .code
 main PROC
@@ -167,6 +168,12 @@ main PROC
     mov dl,27
     call Gotoxy
     mov edx,OFFSET borderHint
+    call WriteString
+
+    mov dh,2
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET titleBar
     call WriteString
 
     call ReadChar
