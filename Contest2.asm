@@ -250,6 +250,14 @@ main PROC
     je done
     cmp inputChar,'Q'
     je done
+
+    cmp inputChar,'a'
+    jne skipLeft
+    cmp playerX,21
+    jbe skipLeft
+    dec playerX
+skipLeft:
+
     dec car1X
     cmp car1X,21
     jae skipReset1
