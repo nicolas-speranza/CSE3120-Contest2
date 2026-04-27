@@ -279,6 +279,13 @@ skipRight:
     dec playerY
 skipUp:
 
+    cmp inputChar,'s'
+    jne skipDown
+    cmp playerY,7
+    jae skipDown
+    inc playerY
+skipDown:
+
     dec car1X
     cmp car1X,21
     jae skipReset1
