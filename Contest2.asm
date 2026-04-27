@@ -9,6 +9,7 @@ botBorder BYTE "+----------------------------------------+",0
 playerCh BYTE "@",0
 playerX BYTE 40
 playerY BYTE 3
+moveMsg BYTE "Use WASD to move",0
 
 .code
 main PROC
@@ -48,6 +49,12 @@ main PROC
     mov dl,24
     call Gotoxy
     mov edx,OFFSET startMsg
+    call WriteString
+
+    mov dh,9
+    mov dl,28
+    call Gotoxy
+    mov edx,OFFSET moveMsg
     call WriteString
 
     call ReadChar
