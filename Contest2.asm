@@ -30,6 +30,7 @@ titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
 dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
 goalHint BYTE "Reach the goal!",0
+roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 
 .code
 main PROC
@@ -195,6 +196,12 @@ main PROC
     mov dl,62
     call Gotoxy
     mov edx,OFFSET goalHint
+    call WriteString
+
+    mov dh,5
+    mov dl,20
+    call Gotoxy
+    mov edx,OFFSET roadMark
     call WriteString
 
     call ReadChar
