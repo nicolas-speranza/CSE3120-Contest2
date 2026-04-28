@@ -480,5 +480,9 @@ HI_Restart:
 HI_Quit:
     exit
 
+HI_NoKey:
+    ret
+HandleInput ENDP
+
 
 END main
