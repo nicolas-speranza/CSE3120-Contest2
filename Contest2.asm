@@ -181,4 +181,16 @@ DrawScene PROC
     ret
 DrawScene ENDP
 
+DrawHUD PROC
+    mov eax,textColor
+    call SetTextColor
+
+    mov dh,HUDROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET hudLives
+    call WriteString
+    movzx eax,lives
+    call WriteDec
+
 END main
