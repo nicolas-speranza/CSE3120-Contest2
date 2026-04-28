@@ -91,7 +91,16 @@ GameLoop:
     call CheckGoal
     call DrawScene
 
-    mov eax,70
+    movzx eax,level
+    dec eax
+    imul eax,5
+    mov ebx,70
+    sub ebx,eax
+    cmp ebx,25
+    jae DelayOK
+    mov ebx,25
+DelayOK:
+    mov eax,ebx
     call Delay
     jmp GameLoop
 
