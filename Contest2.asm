@@ -371,4 +371,15 @@ DrawCars PROC
     call Gotoxy
     mov edx,OFFSET carTruck
 
+    call WriteString
+
+    mov dh,LANE2ROW
+    mov dl,car4X
+    call Gotoxy
+    mov edx,OFFSET carSmall
+    call WriteString
+
+    mov dh,LANE3ROW
+    mov dl,car5X
+
 END main
