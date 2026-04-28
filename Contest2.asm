@@ -410,5 +410,16 @@ DrawPlayer PROC
     ret
 DrawPlayer ENDP
 
+HandleInput PROC
+    call ReadKey
+    jz HI_NoKey
+
+    mov inputChar,al
+
+    cmp inputChar,'q'
+    je HI_Quit
+    cmp inputChar,'Q'
+    je HI_Quit
+
 
 END main
