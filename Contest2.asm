@@ -57,10 +57,12 @@ timeLeft BYTE 60
 frameCounter BYTE 0
 gameOverMsg BYTE "TIME UP - R to restart, Q to quit",0
 loseMsg BYTE "OUT OF LIVES - R to restart, Q to quit",0
-car1X BYTE 28
-car2X BYTE 40
-car3X BYTE 50
-car4X BYTE 55
+car1X BYTE 36
+car2X BYTE 18
+car3X BYTE 8
+car4X BYTE 28
+car5X BYTE 33
+car6X BYTE 14
 titleColor DWORD yellow+(black*16)
 playerColor DWORD lightGreen+(black*16)
 carColor DWORD lightRed+(black*16)
