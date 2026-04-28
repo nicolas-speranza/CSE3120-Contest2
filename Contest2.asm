@@ -79,18 +79,26 @@ StartGame:
 
 GameLoop:
 
-    mov dh,4
-    mov dl,car1X
-    call Gotoxy
-    mov edx,OFFSET blank3
-    call WriteString
+    call HandleInput
+    cmp restartFlag,1
+    je StartGame
 
-    call ReadChar
-    mov inputChar,al
-    cmp inputChar,'q'
-    je done
-    cmp inputChar,'Q'
-    je done
+    call UpdateCars
+    call CheckCollision
+    call UpdateTimer
+
+    cmp lives,0
+    je ShowOutOfLives
+
+    cmp timeLeft,0
+    je ShowTimeUp
+
+    call CheckGoal
+    call DrawScene
+
+    mov eax,70
+    call Delay
+    jmp GameLoop
 
     mov dh,playerY
     mov dl,playerX
