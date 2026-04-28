@@ -102,26 +102,6 @@ GameLoop:
 
    
 
-hitPlayer:
-    mov dh,12
-    mov dl,30
-    call Gotoxy
-    mov edx,OFFSET hitMsg
-    call WriteString
-    call ReadChar
-    exit
-
-winPlayer:
-    mov dh,13
-    mov dl,25
-    call Gotoxy
-    mov edx,OFFSET winMsg
-    call WriteString
-    call ReadChar
-    exit
-
-done:
-    exit
 
 main ENDP
 END main
