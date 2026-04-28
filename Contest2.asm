@@ -23,16 +23,12 @@ STARTX      = 23
 
 .data
 titleText BYTE "BYTE HOPPER",0
-startMsg BYTE "Press any key to start...",0
 topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
 botBorder BYTE "+----------------------------------------+",0
 playerChar BYTE "@",0
 playerX BYTE STARTX
 playerY BYTE STARTROW
-moveMsg BYTE "Use WASD to move",0
-quitMsg BYTE "Press Q to quit",0
-startPrompt BYTE "Press any key to begin",0
 goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
@@ -47,10 +43,8 @@ hudLevel BYTE "Level: ",0
 hudTimer BYTE "Time: ",0
 controlsMsg BYTE "WASD Move   Q Quit   R Restart",0
 objectiveMsg BYTE "Get as many crossings as possible before time runs out",0
-grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
-dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
 roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
@@ -58,20 +52,13 @@ bottomBorder BYTE "+----------------------------------------+",0
 car4 BYTE "[=]",0
 inputChar BYTE ?
 car1X BYTE 28
-blank3 BYTE "   ",0
-gameLoopLabel BYTE 0
-blank1 BYTE " ",0
 car2X BYTE 40
-blank5 BYTE "     ",0
 car3X BYTE 50
 car4X BYTE 55
-hitMsg BYTE "You got hit!",0
-winMsg BYTE "You made it across!",0
 titleColor DWORD yellow+(black*16)
 playerColor DWORD lightGreen+(black*16)
 carColor DWORD lightRed+(black*16)
 goalColor DWORD yellow+(black*16)
-startColor DWORD lightGreen+(black*16)
 
 .code
 main PROC
