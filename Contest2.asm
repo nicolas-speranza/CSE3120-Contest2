@@ -640,4 +640,13 @@ CheckGoal PROC
     mov al,score
     mov ah,0
 
+    mov bl,3
+    div bl
+    inc al
+    mov level,al
+
+CG_Done:
+    ret
+CheckGoal ENDP
+
 END main
