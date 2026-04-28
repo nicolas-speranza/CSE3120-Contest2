@@ -38,12 +38,10 @@ hudLevel BYTE "Level: ",0
 hudTimer BYTE "Time: ",0
 controlsMsg BYTE "WASD Move   Q Quit   R Restart",0
 objectiveMsg BYTE "Get as many crossings as possible before time runs out",0
-titleText BYTE "BYTE HOPPER",0
 safeLine BYTE "|                                       |",0
 roadMark BYTE "|  -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -  |",0
 roadMark3 BYTE "|  -   -   -   -   -   -   -   -   -   |",0
-bottomBorder BYTE "+----------------------------------------+",0
 inputChar BYTE ?
 lives BYTE 3
 score BYTE 0
@@ -63,6 +61,7 @@ titleColor DWORD yellow+(black*16)
 playerColor DWORD lightGreen+(black*16)
 carColor DWORD lightRed+(black*16)
 goalColor DWORD yellow+(black*16)
+textColor DWORD white+(black*16)
 msgColor DWORD lightMagenta+(black*16)
 
 .code
