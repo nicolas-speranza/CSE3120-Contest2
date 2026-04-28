@@ -622,4 +622,11 @@ CheckTruckHit PROC
     ja CTH_Miss
     mov al,1
 
+    ret
+
+CTH_Miss:
+    mov al,0
+    ret
+CheckTruckHit ENDP
+
 END main
