@@ -79,24 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov dh,1
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET livesMsg
-    call WriteString
-
-    mov dh,1
-    mov dl,35
-    call Gotoxy
-    mov edx,OFFSET scoreMsg
-    call WriteString
-
-    mov dh,1
-    mov dl,50
-    call Gotoxy
-    mov edx,OFFSET levelMsg
-    call WriteString
-
     mov dh,8
     mov dl,20
     call Gotoxy
