@@ -494,5 +494,15 @@ UC_L1A:
     dec car2X
     cmp car2X,MINX
 
+    jae UC_L1B
+    mov car2X,MAXX
+UC_L1B:
+
+    inc car3X
+    cmp car3X,37
+    jbe UC_L2A
+    mov car3X,MINX
+UC_L2A:
+
 
 END main
