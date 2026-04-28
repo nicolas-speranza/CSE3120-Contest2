@@ -514,5 +514,16 @@ UC_L2B:
     cmp car5X,MINX
     jae UC_L3A
 
+    mov car5X,MAXX
+UC_L3A:
+
+    dec car6X
+    cmp car6X,MINX
+    jae UC_L3B
+    mov car6X,37
+UC_L3B:
+    ret
+UpdateCars ENDP
+
 
 END main
