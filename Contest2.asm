@@ -332,4 +332,14 @@ DrawBoard PROC
     mov dh,MSGROW2
     mov dl,LEFTCOL+1
 
+    call Gotoxy
+    mov edx,OFFSET objectiveMsg
+    call WriteString
+
+    mov dh,MSGROW3
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET safeLine
+    call WriteString
+
 END main
