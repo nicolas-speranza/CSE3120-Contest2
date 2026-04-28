@@ -148,5 +148,8 @@ WaitOutOfLives:
     je QuitGame
     jmp WaitOutOfLives
 
+QuitGame:
+    exit
+
 main ENDP
 END main
