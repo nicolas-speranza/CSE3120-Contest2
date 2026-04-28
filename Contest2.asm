@@ -1,5 +1,26 @@
 INCLUDE Irvine32.inc
 
+LEFTCOL     = 4
+HUDROW      = 1
+TITLEROW    = 3
+TOPROW      = 4
+GOALROW     = 5
+SAFE1ROW    = 6
+LANE1ROW    = 7
+SAFE2ROW    = 8
+LANE2ROW    = 9
+SAFE3ROW    = 10
+LANE3ROW    = 11
+STARTROW    = 12
+BOTTOMROW   = 13
+MSGROW1     = 15
+MSGROW2     = 16
+MSGROW3     = 17
+MSGROW4     = 19
+MINX        = 7
+MAXX        = 41
+STARTX      = 23
+
 .data
 titleMsg BYTE "BYTE HOPPER",0
 startMsg BYTE "Press any key to start...",0
