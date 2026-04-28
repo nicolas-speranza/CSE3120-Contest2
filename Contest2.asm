@@ -67,6 +67,7 @@ titleColor DWORD yellow+(black*16)
 playerColor DWORD lightGreen+(black*16)
 carColor DWORD lightRed+(black*16)
 goalColor DWORD yellow+(black*16)
+msgColor DWORD lightMagenta+(black*16)
 
 .code
 main PROC
