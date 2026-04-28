@@ -276,4 +276,14 @@ DrawBoard PROC
     mov dh,SAFE1ROW
     mov dl,LEFTCOL
 
+    call Gotoxy
+    mov edx,OFFSET safeLine
+    call WriteString
+
+    mov dh,LANE1ROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET roadMark
+    call WriteString
+
 END main
