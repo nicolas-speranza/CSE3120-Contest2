@@ -26,4 +26,13 @@ The game also includes a countdown timer and limited lives. If the player is hit
 - `W` → Move up  
 - `A` → Move left  
 - `S` → Move down  
-- `D` → Move right  
+- `D` → Move right
+- `Q` → Quit the game  
+- `R` → Restart the game  
+
+### Objective
+
+- Avoid all moving vehicles  
+- Reach the goal row at the top of the arena  
+- Score as many crossings as possible before the timer reaches zero  
+- Survive with your remaining lives   
