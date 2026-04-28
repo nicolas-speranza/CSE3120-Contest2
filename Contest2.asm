@@ -79,34 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov dh,6
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET roadMark2
-    call WriteString
-
-    mov dh,7
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET roadMark3
-    call WriteString
-
-    mov dh,9
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET bottomBorder
-    call WriteString
-
-    mov eax,carColor
-    call SetTextColor
-    mov dh,5
-    mov dl,55
-    call Gotoxy
-    mov edx,OFFSET car4
-    call WriteString
-    mov eax,white+(black*16)
-    call SetTextColor
-
     mov dh,4
     mov dl,car1X
     call Gotoxy
