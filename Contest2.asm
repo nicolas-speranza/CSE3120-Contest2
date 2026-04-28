@@ -536,6 +536,18 @@ ExtraL1B:
     cmp level,3
     jbe SpeedDone
 
+    inc car3X
+    cmp car3X,37
+    jbe ExtraL2A
+    mov car3X,MINX
+ExtraL2A:
+
+    inc car4X
+    cmp car4X,MAXX
+    jbe ExtraL2B
+    mov car4X,MINX
+ExtraL2B:
+
 UpdateTimer PROC
     inc frameCounter
     cmp frameCounter,14
