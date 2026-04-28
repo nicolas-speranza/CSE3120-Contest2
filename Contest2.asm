@@ -613,4 +613,13 @@ CSH_Miss:
     ret
 CheckSmallHit ENDP
 
+CheckTruckHit PROC
+    cmp al,bl
+    jb CTH_Miss
+    mov bh,bl
+    add bh,4
+    cmp al,bh
+    ja CTH_Miss
+    mov al,1
+
 END main
