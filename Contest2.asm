@@ -321,4 +321,15 @@ DrawBoard PROC
     call Gotoxy
     mov edx,OFFSET bottomBorder
 
+    call WriteString
+
+    mov dh,MSGROW1
+    mov dl,LEFTCOL+5
+    call Gotoxy
+    mov edx,OFFSET controlsMsg
+    call WriteString
+
+    mov dh,MSGROW2
+    mov dl,LEFTCOL+1
+
 END main
