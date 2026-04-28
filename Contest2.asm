@@ -535,5 +535,9 @@ UpdateTimer PROC
     je UT_Done
     dec timeLeft
 
+UT_Done:
+    ret
+UpdateTimer ENDP
+
 
 END main
