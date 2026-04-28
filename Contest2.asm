@@ -32,7 +32,6 @@ playerX BYTE STARTX
 playerY BYTE STARTROW
 moveMsg BYTE "Use WASD to move",0
 quitMsg BYTE "Press Q to quit",0
-laneMsg BYTE "Avoid traffic and reach the top",0
 startPrompt BYTE "Press any key to begin",0
 goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
@@ -46,8 +45,9 @@ hudLives BYTE "Lives: ",0
 hudScore BYTE "Score: ",0
 hudLevel BYTE "Level: ",0
 hudTimer BYTE "Time: ",0
+controlsMsg BYTE "WASD Move   Q Quit   R Restart",0
+objectiveMsg BYTE "Get as many crossings as possible before time runs out",0
 grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
-borderHint BYTE "WASD Move   Q Quit",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
 dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
