@@ -44,9 +44,9 @@ controlsMsg BYTE "WASD Move   Q Quit   R Restart",0
 objectiveMsg BYTE "Get as many crossings as possible before time runs out",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
-roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
-roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
-roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
+roadMark BYTE "|  -   -   -   -   -   -   -   -   -   |",0
+roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -  |",0
+roadMark3 BYTE "|  -   -   -   -   -   -   -   -   -   |",0
 bottomBorder BYTE "+----------------------------------------+",0
 inputChar BYTE ?
 lives BYTE 3
