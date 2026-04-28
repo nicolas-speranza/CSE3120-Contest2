@@ -539,5 +539,14 @@ UT_Done:
     ret
 UpdateTimer ENDP
 
+CheckCollision PROC
+    cmp playerY,LANE1ROW
+    je CC_Lane1
+    cmp playerY,LANE2ROW
+    je CC_Lane2
+    cmp playerY,LANE3ROW
+    je CC_Lane3
+    ret
+
 
 END main
