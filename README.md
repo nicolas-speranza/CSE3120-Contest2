@@ -35,4 +35,19 @@ The game also includes a countdown timer and limited lives. If the player is hit
 - Avoid all moving vehicles  
 - Reach the goal row at the top of the arena  
 - Score as many crossings as possible before the timer reaches zero  
-- Survive with your remaining lives   
+- Survive with your remaining lives
+
+  ---
+
+## How to Compile and Run
+
+### Requirements
+
+- Windows OS  
+- Visual Studio (with C++ tools installed)  
+- Irvine32 library  
+
+The Irvine32 files should be located at:
+
+```text
+C:\Irvine\irvine
