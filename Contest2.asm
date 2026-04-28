@@ -557,6 +557,16 @@ ExtraL2B:
     mov car5X,MAXX
 ExtraL3A:
 
+    dec car6X
+    cmp car6X,MINX
+    jae ExtraL3B
+    mov car6X,37
+ExtraL3B:
+
+SpeedDone:
+    ret
+UpdateCars ENDP
+
 UpdateTimer PROC
     inc frameCounter
     cmp frameCounter,14
