@@ -517,8 +517,15 @@ UC_L3A:
     jae UC_L3B
     mov car6X,37
 UC_L3B:
-    ret
-UpdateCars ENDP
+
+    cmp level,2
+    jbe SpeedDone
+
+    dec car1X
+    cmp car1X,MINX
+    jae ExtraL1A
+    mov car1X,MAXX
+ExtraL1A:
 
 UpdateTimer PROC
     inc frameCounter
