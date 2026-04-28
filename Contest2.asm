@@ -397,5 +397,18 @@ DrawCars PROC
     ret
 DrawCars ENDP
 
+DrawPlayer PROC
+    mov eax,playerColor
+    call SetTextColor
+    mov dh,playerY
+    mov dl,playerX
+    call Gotoxy
+    mov edx,OFFSET playerChar
+    call WriteString
+    mov eax,textColor
+    call SetTextColor
+    ret
+DrawPlayer ENDP
+
 
 END main
