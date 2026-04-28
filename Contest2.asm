@@ -392,4 +392,10 @@ DrawCars PROC
     mov edx,OFFSET carTruck
     call WriteString
 
+    mov eax,textColor
+    call SetTextColor
+    ret
+DrawCars ENDP
+
+
 END main
