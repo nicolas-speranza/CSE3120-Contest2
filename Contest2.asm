@@ -79,30 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov dh,3
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET safeLine
-    call WriteString
-
-    mov dh,4
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET dividerLine
-    call WriteString
-
-    mov dh,1
-    mov dl,62
-    call Gotoxy
-    mov edx,OFFSET goalHint
-    call WriteString
-
-    mov dh,5
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET roadMark
-    call WriteString
-
     mov dh,6
     mov dl,20
     call Gotoxy
