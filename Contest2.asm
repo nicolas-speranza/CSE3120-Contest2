@@ -286,4 +286,16 @@ DrawBoard PROC
     mov edx,OFFSET roadMark
     call WriteString
 
+    mov dh,SAFE2ROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET safeLine
+    call WriteString
+
+    mov dh,LANE2ROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET roadMark2
+    call WriteString
+
 END main
