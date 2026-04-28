@@ -23,17 +23,17 @@ STARTX      = 23
 
 .data
 titleText BYTE "BYTE HOPPER",0
-topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
-botBorder BYTE "+----------------------------------------+",0
+topBorder BYTE "+---------------------------------------+",0
+goalLine BYTE "|=============== GOAL ==================|",0
+startLine BYTE "|============== START ==================|",0
+bottomBorder BYTE "+---------------------------------------+",0
 playerChar BYTE "@",0
 playerX BYTE STARTX
 playerY BYTE STARTROW
-goalLine BYTE "|================ GOAL ==================|",0
 roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
 roadLine3 BYTE "|----------------------------------------|",0
-startLine BYTE "|================ START =================|",0
 carSmall BYTE "[=]",0
 carTruck BYTE "[###]",0
 hudLives BYTE "Lives: ",0
