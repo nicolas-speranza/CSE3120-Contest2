@@ -112,5 +112,17 @@ ShowTimeUp:
     mov eax,textColor
     call SetTextColor
 
+WaitTimeUp:
+    call ReadChar
+    cmp al,'r'
+    je StartGame
+    cmp al,'R'
+    je StartGame
+    cmp al,'q'
+    je QuitGame
+    cmp al,'Q'
+    je QuitGame
+    jmp WaitTimeUp
+
 main ENDP
 END main
