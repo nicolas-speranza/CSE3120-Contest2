@@ -173,4 +173,12 @@ InitGame PROC
     ret
 InitGame ENDP
 
+DrawScene PROC
+    call DrawHUD
+    call DrawBoard
+    call DrawCars
+    call DrawPlayer
+    ret
+DrawScene ENDP
+
 END main
