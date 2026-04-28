@@ -243,4 +243,13 @@ PrintSeconds:
     ret
 DrawHUD ENDP
 
+DrawBoard PROC
+    mov eax,titleColor
+    call SetTextColor
+    mov dh,TITLEROW
+    mov dl,LEFTCOL+14
+    call Gotoxy
+    mov edx,OFFSET titleText
+    call WriteString
+
 END main
