@@ -606,5 +606,11 @@ CheckSmallHit PROC
     ja CSH_Miss
     mov al,1
 
+    ret
+
+CSH_Miss:
+    mov al,0
+    ret
+CheckSmallHit ENDP
 
 END main
