@@ -42,15 +42,15 @@ startLine BYTE "|================ START =================|",0
 car1 BYTE "[=]",0
 car2 BYTE "[###]",0
 car3 BYTE "[=]",0
-livesMsg BYTE "Lives: 3",0
-scoreMsg BYTE "Score: 0",0
-levelMsg BYTE "Level: 1",0
+hudLives BYTE "Lives: ",0
+hudScore BYTE "Score: ",0
+hudLevel BYTE "Level: ",0
+hudTimer BYTE "Time: ",0
 grassLine BYTE "|""""""""""""""""""""""""""""""""""""""""|",0
 borderHint BYTE "WASD Move   Q Quit",0
 titleBar BYTE "|               BYTE HOPPER              |",0
 safeLine BYTE "|                                        |",0
 dividerLine BYTE "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|",0
-goalHint BYTE "Reach the goal!",0
 roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
