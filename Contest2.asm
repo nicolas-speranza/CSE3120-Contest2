@@ -431,5 +431,15 @@ HandleInput PROC
     cmp inputChar,'A'
     je HI_Left
 
+    cmp inputChar,'d'
+    je HI_Right
+    cmp inputChar,'D'
+    je HI_Right
+
+    cmp inputChar,'w'
+    je HI_Up
+    cmp inputChar,'W'
+    je HI_Up
+
 
 END main
