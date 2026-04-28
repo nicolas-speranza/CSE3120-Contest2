@@ -548,5 +548,15 @@ CheckCollision PROC
     je CC_Lane3
     ret
 
+CC_Lane1:
+    mov al,playerX
+    mov bl,car1X
+    call CheckSmallHit
+    cmp al,1
+    je CC_Hit
+    mov al,playerX
+    mov bl,car2X
+    call CheckSmallHit
+
 
 END main
