@@ -350,4 +350,14 @@ DrawBoard PROC
     ret
 DrawBoard ENDP
 
+DrawCars PROC
+    mov eax,carColor
+    call SetTextColor
+
+    mov dh,LANE1ROW
+    mov dl,car1X
+    call Gotoxy
+    mov edx,OFFSET carSmall
+    call WriteString
+
 END main
