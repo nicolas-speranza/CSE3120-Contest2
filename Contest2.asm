@@ -548,6 +548,15 @@ ExtraL2A:
     mov car4X,MINX
 ExtraL2B:
 
+    cmp level,4
+    jbe SpeedDone
+
+    dec car5X
+    cmp car5X,MINX
+    jae ExtraL3A
+    mov car5X,MAXX
+ExtraL3A:
+
 UpdateTimer PROC
     inc frameCounter
     cmp frameCounter,14
