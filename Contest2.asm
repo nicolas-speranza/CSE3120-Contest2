@@ -441,5 +441,15 @@ HandleInput PROC
     cmp inputChar,'W'
     je HI_Up
 
+    cmp inputChar,'s'
+    je HI_Down
+    cmp inputChar,'S'
+    je HI_Down
+    jmp HI_NoKey
+
+HI_Left:
+    cmp playerX,MINX
+    jbe HI_NoKey
+
 
 END main
