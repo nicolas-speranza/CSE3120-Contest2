@@ -310,4 +310,15 @@ DrawBoard PROC
     mov edx,OFFSET roadMark3
     call WriteString
 
+    mov dh,STARTROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET startLine
+    call WriteString
+
+    mov dh,BOTTOMROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET bottomBorder
+
 END main
