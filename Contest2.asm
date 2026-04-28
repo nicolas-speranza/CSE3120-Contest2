@@ -264,4 +264,16 @@ DrawBoard PROC
     mov eax,goalColor
     call SetTextColor
 
+    mov dh,GOALROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET goalLine
+    call WriteString
+
+    mov eax,textColor
+    call SetTextColor
+
+    mov dh,SAFE1ROW
+    mov dl,LEFTCOL
+
 END main
