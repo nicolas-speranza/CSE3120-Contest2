@@ -79,36 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov dh,8
-    mov dl,24
-    call Gotoxy
-    mov edx,OFFSET startMsg
-    call WriteString
-
-    mov dh,9
-    mov dl,28
-    call Gotoxy
-    mov edx,OFFSET moveMsg
-    call WriteString
-
-    mov dh,10
-    mov dl,28
-    call Gotoxy
-    mov edx,OFFSET quitMsg
-    call WriteString
-
-    mov dh,11
-    mov dl,22
-    call Gotoxy
-    mov edx,OFFSET laneMsg
-    call WriteString
-
-    mov dh,13
-    mov dl,24
-    call Gotoxy
-    mov edx,OFFSET startPrompt
-    call WriteString
-
     mov eax,goalColor
     call SetTextColor
     mov dh,3
