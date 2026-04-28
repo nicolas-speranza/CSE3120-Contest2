@@ -421,5 +421,15 @@ HandleInput PROC
     cmp inputChar,'Q'
     je HI_Quit
 
+    cmp inputChar,'r'
+    je HI_Restart
+    cmp inputChar,'R'
+    je HI_Restart
+
+    cmp inputChar,'a'
+    je HI_Left
+    cmp inputChar,'A'
+    je HI_Left
+
 
 END main
