@@ -568,5 +568,13 @@ CC_Lane2:
     call CheckTruckHit
     cmp al,1
 
+    je CC_Hit
+    mov al,playerX
+    mov bl,car4X
+    call CheckSmallHit
+    cmp al,1
+    je CC_Hit
+    ret
+
 
 END main
