@@ -103,11 +103,6 @@ GameLoop:
     mov eax, ebx
     call Delay
 
-DelayOK:
-    mov eax,ebx
-    call Delay
-    jmp GameLoop
-
 ShowTimeUp:
     call DrawScene
     mov eax,msgColor
