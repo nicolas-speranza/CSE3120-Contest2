@@ -102,6 +102,7 @@ GameLoop:
     DelayOK:
     mov eax, ebx
     call Delay
+    jmp GameLoop
 
 ShowTimeUp:
     call DrawScene
