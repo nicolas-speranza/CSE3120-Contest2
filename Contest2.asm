@@ -22,12 +22,12 @@ MAXX        = 41
 STARTX      = 23
 
 .data
-titleMsg BYTE "BYTE HOPPER",0
+titleText BYTE "BYTE HOPPER",0
 startMsg BYTE "Press any key to start...",0
 topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
 botBorder BYTE "+----------------------------------------+",0
-playerCh BYTE "@",0
+playerChar BYTE "@",0
 playerX BYTE 40
 playerY BYTE 7
 moveMsg BYTE "Use WASD to move",0
