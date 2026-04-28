@@ -71,10 +71,13 @@ msgColor DWORD lightMagenta+(black*16)
 
 .code
 main PROC
+
+StartGame:
+    call InitGame
     call Clrscr
+    call DrawScene
 
-    gameLoop:
-
+GameLoop:
     mov dh,2
     mov dl,20
     call Gotoxy
