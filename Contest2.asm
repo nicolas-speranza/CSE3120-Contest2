@@ -585,5 +585,17 @@ CC_Lane3:
     mov al,playerX
     mov bl,car6X
 
+    call CheckTruckHit
+    cmp al,1
+    je CC_Hit
+    ret
+
+CC_Hit:
+    dec lives
+    mov playerX,STARTX
+    mov playerY,STARTROW
+    ret
+CheckCollision ENDP
+
 
 END main
