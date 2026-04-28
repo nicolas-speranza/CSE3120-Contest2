@@ -14,3 +14,16 @@ The objective of the game is to:
 The game also includes a countdown timer and limited lives. If the player is hit by too many vehicles or runs out of time, the game ends.
 
 ---
+
+## How to Play
+
+- The player is represented by `@`  
+- Small cars are represented by `[=]`  
+- Trucks are represented by `[###]`  
+
+### Controls
+
+- `W` → Move up  
+- `A` → Move left  
+- `S` → Move down  
+- `D` → Move right  
