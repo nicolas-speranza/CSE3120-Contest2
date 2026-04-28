@@ -252,4 +252,16 @@ DrawBoard PROC
     mov edx,OFFSET titleText
     call WriteString
 
+    mov eax,textColor
+    call SetTextColor
+
+    mov dh,TOPROW
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET topBorder
+    call WriteString
+
+    mov eax,goalColor
+    call SetTextColor
+
 END main
