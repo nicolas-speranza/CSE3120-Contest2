@@ -597,5 +597,14 @@ CC_Hit:
     ret
 CheckCollision ENDP
 
+CheckSmallHit PROC
+    cmp al,bl
+    jb CSH_Miss
+    mov bh,bl
+    add bh,2
+    cmp al,bh
+    ja CSH_Miss
+    mov al,1
+
 
 END main
