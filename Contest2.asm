@@ -219,4 +219,17 @@ DrawHUD PROC
     movzx eax,level
     call WriteDec
 
+    mov al,' '
+    call WriteChar
+    mov al,' '
+    call WriteChar
+
+    mov dh,HUDROW
+    mov dl,LEFTCOL+36
+    call Gotoxy
+    mov edx,OFFSET hudTimer
+    call WriteString
+
+    movzx eax,timeLeft
+
 END main
