@@ -152,4 +152,25 @@ QuitGame:
     exit
 
 main ENDP
+
+InitGame PROC
+    mov lives,3
+    mov score,0
+    mov level,1
+    mov restartFlag,0
+    mov timeLeft,60
+    mov frameCounter,0
+
+    mov playerX,STARTX
+    mov playerY,STARTROW
+
+    mov car1X,36
+    mov car2X,18
+    mov car3X,8
+    mov car4X,28
+    mov car5X,33
+    mov car6X,14
+    ret
+InitGame ENDP
+
 END main
