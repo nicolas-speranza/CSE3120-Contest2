@@ -484,5 +484,15 @@ HI_NoKey:
     ret
 HandleInput ENDP
 
+UpdateCars PROC
+    dec car1X
+    cmp car1X,MINX
+    jae UC_L1A
+    mov car1X,MAXX
+UC_L1A:
+
+    dec car2X
+    cmp car2X,MINX
+
 
 END main
