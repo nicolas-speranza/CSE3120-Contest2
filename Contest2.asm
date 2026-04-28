@@ -100,8 +100,17 @@ GameLoop:
     call Delay
     jmp GameLoop
 
-   
-
+ShowTimeUp:
+    call DrawScene
+    mov eax,msgColor
+    call SetTextColor
+    mov dh,MSGROW4
+    mov dl,LEFTCOL+3
+    call Gotoxy
+    mov edx,OFFSET gameOverMsg
+    call WriteString
+    mov eax,textColor
+    call SetTextColor
 
 main ENDP
 END main
