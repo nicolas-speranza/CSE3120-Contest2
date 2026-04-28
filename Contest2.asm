@@ -460,5 +460,15 @@ HI_Right:
     inc playerX
     jmp HI_NoKey
 
+HI_Up:
+    cmp playerY,GOALROW
+    jbe HI_NoKey
+    dec playerY
+    jmp HI_NoKey
+
+HI_Down:
+    cmp playerY,STARTROW
+    jae HI_NoKey
+
 
 END main
