@@ -629,4 +629,15 @@ CTH_Miss:
     ret
 CheckTruckHit ENDP
 
+CheckGoal PROC
+    cmp playerY,GOALROW
+    jne CG_Done
+
+    inc score
+    mov playerX,STARTX
+    mov playerY,STARTROW
+
+    mov al,score
+    mov ah,0
+
 END main
