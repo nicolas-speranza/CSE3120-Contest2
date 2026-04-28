@@ -576,5 +576,14 @@ CC_Lane2:
     je CC_Hit
     ret
 
+CC_Lane3:
+    mov al,playerX
+    mov bl,car5X
+    call CheckSmallHit
+    cmp al,1
+    je CC_Hit
+    mov al,playerX
+    mov bl,car6X
+
 
 END main
