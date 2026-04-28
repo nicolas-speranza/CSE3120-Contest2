@@ -136,5 +136,17 @@ ShowOutOfLives:
     mov eax,textColor
     call SetTextColor
 
+WaitOutOfLives:
+    call ReadChar
+    cmp al,'r'
+    je StartGame
+    cmp al,'R'
+    je StartGame
+    cmp al,'q'
+    je QuitGame
+    cmp al,'Q'
+    je QuitGame
+    jmp WaitOutOfLives
+
 main ENDP
 END main
