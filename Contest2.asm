@@ -49,6 +49,14 @@ roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 bottomBorder BYTE "+----------------------------------------+",0
 inputChar BYTE ?
+lives BYTE 3
+score BYTE 0
+level BYTE 1
+restartFlag BYTE 0
+timeLeft BYTE 60
+frameCounter BYTE 0
+gameOverMsg BYTE "TIME UP - R to restart, Q to quit",0
+loseMsg BYTE "OUT OF LIVES - R to restart, Q to quit",0
 car1X BYTE 28
 car2X BYTE 40
 car3X BYTE 50
