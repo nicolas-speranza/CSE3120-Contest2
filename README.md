@@ -61,3 +61,46 @@ C:\Irvine\irvine
 
 ```text
 cd path\to\CSE3120-Contest1
+
+```
+
+Example:
+
+```text
+cd %USERPROFILE%\Downloads\CSE3120-Contest1-main\CSE3120-Contest1-main
+```
+
+4. Build the program:
+
+```text
+build.bat
+```
+
+If successful, you should see:
+
+```text
+Build successful.
+Run with: Contest1.exe
+```
+
+5. Run the game:
+
+```text
+Contest1.exe
+```
+
+Alternatively, you can just download the Contest2.asm file, open it in your Visual Studio (which I'm assuming is set up correctly), build, and then run it by clicking on Start Debugging or Start Without Debugging.
+
+---
+
+## Notes
+
+- The build script automatically sets up the correct 32-bit environment  
+- If the build fails, verify that Irvine32 is installed at `C:\Irvine\irvine`  
+
+---
+
+## Game Demo
+
+YouTube Video Demo:
+
