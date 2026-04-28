@@ -92,6 +92,8 @@ GameLoop:
     call DrawScene
 
     mov eax,70
+    call Delay
+    jmp GameLoop
 
 ShowTimeUp:
     call DrawScene
