@@ -124,5 +124,17 @@ WaitTimeUp:
     je QuitGame
     jmp WaitTimeUp
 
+ShowOutOfLives:
+    call DrawScene
+    mov eax,msgColor
+    call SetTextColor
+    mov dh,MSGROW4
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET loseMsg
+    call WriteString
+    mov eax,textColor
+    call SetTextColor
+
 main ENDP
 END main
