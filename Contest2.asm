@@ -232,4 +232,15 @@ DrawHUD PROC
 
     movzx eax,timeLeft
 
+    cmp eax,10
+    jae PrintSeconds
+    mov al,'0'
+    call WriteChar
+
+PrintSeconds:
+    movzx eax,timeLeft
+    call WriteDec
+    ret
+DrawHUD ENDP
+
 END main
