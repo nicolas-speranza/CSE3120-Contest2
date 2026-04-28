@@ -34,9 +34,8 @@ roadLine BYTE "|----------------------------------------|",0
 roadLine2 BYTE "|----------------------------------------|",0
 roadLine3 BYTE "|----------------------------------------|",0
 startLine BYTE "|================ START =================|",0
-car1 BYTE "[=]",0
-car2 BYTE "[###]",0
-car3 BYTE "[=]",0
+carSmall BYTE "[=]",0
+carTruck BYTE "[###]",0
 hudLives BYTE "Lives: ",0
 hudScore BYTE "Score: ",0
 hudLevel BYTE "Level: ",0
@@ -49,7 +48,6 @@ roadMark BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark2 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 roadMark3 BYTE "|   -   -   -   -   -   -   -   -   -   |",0
 bottomBorder BYTE "+----------------------------------------+",0
-car4 BYTE "[=]",0
 inputChar BYTE ?
 car1X BYTE 28
 car2X BYTE 40
