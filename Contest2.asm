@@ -28,8 +28,8 @@ topBorder BYTE "+----------------------------------------+",0
 midBorder BYTE "|                                        |",0
 botBorder BYTE "+----------------------------------------+",0
 playerChar BYTE "@",0
-playerX BYTE 40
-playerY BYTE 7
+playerX BYTE STARTX
+playerY BYTE STARTROW
 moveMsg BYTE "Use WASD to move",0
 quitMsg BYTE "Press Q to quit",0
 laneMsg BYTE "Avoid traffic and reach the top",0
