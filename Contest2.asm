@@ -451,5 +451,14 @@ HI_Left:
     cmp playerX,MINX
     jbe HI_NoKey
 
+    dec playerX
+    jmp HI_NoKey
+
+HI_Right:
+    cmp playerX,MAXX
+    jae HI_NoKey
+    inc playerX
+    jmp HI_NoKey
+
 
 END main
