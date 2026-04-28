@@ -79,22 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov eax,playerColor
-    call SetTextColor
-    mov dh,playerY
-    mov dl,playerX
-    call Gotoxy
-    mov edx,OFFSET playerCh
-    call WriteString
-    mov eax,white+(black*16)
-    call SetTextColor
-
-    mov dh,6
-    mov dl,31
-    call Gotoxy
-    mov edx,OFFSET titleMsg
-    call WriteString
-
     mov dh,8
     mov dl,24
     call Gotoxy
