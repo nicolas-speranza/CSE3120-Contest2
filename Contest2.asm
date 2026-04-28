@@ -525,5 +525,15 @@ UC_L3B:
     ret
 UpdateCars ENDP
 
+UpdateTimer PROC
+    inc frameCounter
+    cmp frameCounter,14
+    jb UT_Done
+
+    mov frameCounter,0
+    cmp timeLeft,0
+    je UT_Done
+    dec timeLeft
+
 
 END main
