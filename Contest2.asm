@@ -78,23 +78,6 @@ StartGame:
     call DrawScene
 
 GameLoop:
-    mov dh,2
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET topBorder
-    call WriteString
-
-    mov dh,3
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET midBorder
-    call WriteString
-
-    mov dh,4
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET botBorder
-    call WriteString
 
     mov eax,playerColor
     call SetTextColor
