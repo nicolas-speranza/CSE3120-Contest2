@@ -79,28 +79,6 @@ StartGame:
 
 GameLoop:
 
-    mov dh,8
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET grassLine
-    call WriteString
-
-    mov dh,10
-    mov dl,27
-    call Gotoxy
-    mov edx,OFFSET borderHint
-    call WriteString
-
-    mov eax,titleColor
-    call SetTextColor
-    mov dh,2
-    mov dl,20
-    call Gotoxy
-    mov edx,OFFSET titleBar
-    call WriteString
-    mov eax,white+(black*16)
-    call SetTextColor
-
     mov dh,3
     mov dl,20
     call Gotoxy
