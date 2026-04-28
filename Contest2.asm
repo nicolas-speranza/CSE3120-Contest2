@@ -527,6 +527,15 @@ UC_L3B:
     mov car1X,MAXX
 ExtraL1A:
 
+    dec car2X
+    cmp car2X,MINX
+    jae ExtraL1B
+    mov car2X,MAXX
+ExtraL1B:
+
+    cmp level,3
+    jbe SpeedDone
+
 UpdateTimer PROC
     inc frameCounter
     cmp frameCounter,14
