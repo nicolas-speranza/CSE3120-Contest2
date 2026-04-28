@@ -51,3 +51,13 @@ The Irvine32 files should be located at:
 
 ```text
 C:\Irvine\irvine
+### Steps
+
+1. Download or clone the repository  
+
+2. Open a Command Prompt  
+
+3. Navigate to the project folder:
+
+```text
+cd path\to\CSE3120-Contest1
