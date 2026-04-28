@@ -342,4 +342,12 @@ DrawBoard PROC
     mov edx,OFFSET safeLine
     call WriteString
 
+    mov dh,MSGROW4
+    mov dl,LEFTCOL
+    call Gotoxy
+    mov edx,OFFSET safeLine
+    call WriteString
+    ret
+DrawBoard ENDP
+
 END main
