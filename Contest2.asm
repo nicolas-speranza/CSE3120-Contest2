@@ -470,5 +470,15 @@ HI_Down:
     cmp playerY,STARTROW
     jae HI_NoKey
 
+    inc playerY
+    jmp HI_NoKey
+
+HI_Restart:
+    mov restartFlag,1
+    ret
+
+HI_Quit:
+    exit
+
 
 END main
